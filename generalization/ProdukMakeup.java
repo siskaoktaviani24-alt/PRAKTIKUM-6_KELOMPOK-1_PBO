@@ -1,11 +1,11 @@
 // ProdukMakeup.java
-package aggregation;
+package generalization;
 
 public class ProdukMakeup {
-    private String namaProduk;
-    private int harga;
+    protected String namaProduk;
+    protected double harga;
 
-    public ProdukMakeup(String namaProduk, int harga) {
+    public ProdukMakeup(String namaProduk, double harga) {
         this.namaProduk = namaProduk;
         this.harga = harga;
     }
@@ -14,7 +14,7 @@ public class ProdukMakeup {
         return namaProduk;
     }
 
-    public int getHarga() {
+    public double getHarga() {
         return harga;
     }
 }

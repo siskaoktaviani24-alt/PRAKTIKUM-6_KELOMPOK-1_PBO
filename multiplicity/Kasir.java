@@ -1,5 +1,5 @@
 // Kasir.java
-package aggregation;
+package multiplicity;
 
 public class Kasir {
     private String namaKasir;
