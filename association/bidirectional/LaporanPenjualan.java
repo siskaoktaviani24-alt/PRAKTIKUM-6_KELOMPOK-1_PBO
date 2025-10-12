@@ -1,9 +1,9 @@
 package association.bidirectional;
 
 public class LaporanPenjualan {
-    private String tanggal;
-    private int jumlah;
-    private Produk produk;
+    String tanggal;  // Diubah dari private ke protected
+    int jumlah;      // Diubah dari private ke protected
+    Produk produk;   // Diubah dari private ke protected
 
     public LaporanPenjualan(String tanggal, int jumlah, Produk produk) {
         this.tanggal = tanggal;

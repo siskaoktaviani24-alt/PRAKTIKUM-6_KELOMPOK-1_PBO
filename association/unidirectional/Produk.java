@@ -1,9 +1,8 @@
 package association.unidirectional;
 
 public class Produk {
-    private String nama;
-    private double harga;
-
+    protected String nama;    
+    protected double harga;   
     public Produk(String nama, double harga) {
         this.nama = nama;
         this.harga = harga;

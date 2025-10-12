@@ -1,9 +1,9 @@
 package association.unidirectional;
 
 public class LaporanPenjualan {
-    private String tanggal;
-    private int jumlah;
-    private Produk produk; // hanya mengenal Produk (satu arah)
+    protected String tanggal;  
+    protected int jumlah;      
+    protected Produk produk;   
 
     public LaporanPenjualan(String tanggal, int jumlah, Produk produk) {
         this.tanggal = tanggal;
@@ -17,4 +17,3 @@ public class LaporanPenjualan {
             ", Produk: " + produk.getNama());
     }
 }
-
