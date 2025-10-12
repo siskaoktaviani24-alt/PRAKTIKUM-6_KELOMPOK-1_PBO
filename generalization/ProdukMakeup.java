@@ -1,20 +1,19 @@
-// ProdukMakeup.java
 package generalization;
 
 public class ProdukMakeup {
-    protected String namaProduk;
-    protected double harga;
+    String namaProduk;
+    int harga;
 
-    public ProdukMakeup(String namaProduk, double harga) {
+    public ProdukMakeup(String namaProduk, int harga) {
         this.namaProduk = namaProduk;
         this.harga = harga;
     }
 
-    public String getNamaProduk() {
+    String getNamaProduk() {
         return namaProduk;
     }
 
-    public double getHarga() {
+    double getHarga() {
         return harga;
     }
 }

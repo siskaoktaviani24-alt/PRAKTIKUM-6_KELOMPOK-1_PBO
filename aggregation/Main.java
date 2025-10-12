@@ -1,4 +1,3 @@
-// Main.java
 package aggregation;
 
 import java.util.ArrayList;
@@ -8,27 +7,21 @@ import java.time.format.DateTimeFormatter;
 
 public class Main {
     public static void main(String[] args) {
-        // Membuat objek ProdukMakeup
         ProdukMakeup p1 = new ProdukMakeup("Lipstick", 75000);
         ProdukMakeup p2 = new ProdukMakeup("Foundation", 120000);
         ProdukMakeup p3 = new ProdukMakeup("Maskara", 90000);
 
-        // Membuat objek Kasir
         Kasir kasir1 = new Kasir("Siska");
 
-        // Membuat daftar produk
         List<ProdukMakeup> daftarProduk = new ArrayList<>();
         daftarProduk.add(p1);
         daftarProduk.add(p2);
         daftarProduk.add(p3);
 
-        // Membuat tanggal otomatis
         String tanggal = LocalDate.now().format(DateTimeFormatter.ofPattern("dd MMMM yyyy"));
 
-        // Membuat objek Penjualan
         Penjualan penjualan1 = new Penjualan("P001", tanggal, kasir1, daftarProduk);
 
-        // Menampilkan hasil penjualan dalam bentuk kalimat
-        penjualan1.tampilkanKalimatPenjualan();
+        penjualan1.tampilkanPenjualan();
     }
 }

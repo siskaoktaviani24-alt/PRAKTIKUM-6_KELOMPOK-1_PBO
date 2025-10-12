@@ -1,20 +1,19 @@
-// ProdukMakeup.java
 package aggregation;
 
 public class ProdukMakeup {
-    private String namaProduk;
-    private int harga;
+    String namaProduk;
+    int harga;
 
     public ProdukMakeup(String namaProduk, int harga) {
         this.namaProduk = namaProduk;
         this.harga = harga;
     }
 
-    public String getNamaProduk() {
+    String getNamaProduk() {
         return namaProduk;
     }
 
-    public int getHarga() {
+    int getHarga() {
         return harga;
     }
 }

@@ -1,13 +1,12 @@
-// Penjualan.java
 package aggregation;
 
 import java.util.List;
 
 public class Penjualan {
-    private String idPenjualan;
-    private String tanggal;
-    private Kasir kasir; // Aggregation: Penjualan terhubung dengan Kasir
-    private List<ProdukMakeup> daftarProduk; // Aggregation: Penjualan terhubung dengan Produk
+    String idPenjualan;
+    String tanggal;
+    Kasir kasir;
+    List<ProdukMakeup> daftarProduk;
 
     public Penjualan(String idPenjualan, String tanggal, Kasir kasir, List<ProdukMakeup> daftarProduk) {
         this.idPenjualan = idPenjualan;
@@ -16,7 +15,7 @@ public class Penjualan {
         this.daftarProduk = daftarProduk;
     }
 
-    public void tampilkanKalimatPenjualan() {
+    void tampilkanPenjualan() {
         int totalHarga = 0;
         StringBuilder daftar = new StringBuilder();
 
@@ -27,10 +26,10 @@ public class Penjualan {
             if (i < daftarProduk.size() - 1) daftar.append(", ");
         }
 
-        System.out.println("Pada tanggal " + tanggal + 
-            ", kasir " + kasir.getNamaKasir() + 
-            " berhasil menjual produk: " + daftar +
-            " dengan total harga Rp" + totalHarga + 
-            " (ID Penjualan: " + idPenjualan + ").");
+        System.out.println("Pada tanggal " + tanggal +
+                ", kasir " + kasir.getNamaKasir() +
+                " berhasil menjual produk: " + daftar +
+                " dengan total harga Rp" + totalHarga +
+                " (ID Penjualan: " + idPenjualan + ").");
     }
 }
