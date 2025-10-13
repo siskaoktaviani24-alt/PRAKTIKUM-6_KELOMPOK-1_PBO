@@ -1,9 +1,9 @@
 package association.bidirectional;
 
 public class LaporanPenjualan {
-    String tanggal;  
-    int jumlah;      
-    Produk produk;   
+    public String tanggal;  
+    public int jumlah;      
+    public Produk produk;   
 
     public LaporanPenjualan(String tanggal, int jumlah, Produk produk) {
         this.tanggal = tanggal;
@@ -13,8 +13,6 @@ public class LaporanPenjualan {
     }
 
     public void tampilLaporan() {
-        System.out.println("Tanggal: " + tanggal + 
-            ", Jumlah: " + jumlah + 
-            ", Produk: " + produk.getNama());
+        System.out.println("Tanggal: " + tanggal + ", Jumlah: " + jumlah +  ", Produk: " + produk.getNama());
     }
 }
