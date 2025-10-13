@@ -13,8 +13,5 @@ public class Main {
         daftarProduk.add(lipstick);
         daftarProduk.add(foundation);
         daftarProduk.add(maskara);
-
-        Penjualan penjualan1 = new Penjualan("PJ001", daftarProduk);
-        penjualan1.tampilkanPenjualan();
     }
 }
