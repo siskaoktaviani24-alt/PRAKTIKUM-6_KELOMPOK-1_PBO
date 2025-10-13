@@ -1,17 +1,9 @@
 package association.unidirectional;
 
 public class LaporanPenjualan {
-    String tanggal;  
-    int jumlah;      
-    Produk produk;   
+    Produk produk;   // asosiasi satu arah ke Produk
 
-    public LaporanPenjualan(String tanggal, int jumlah, Produk produk) {
-        this.tanggal = tanggal;
-        this.jumlah = jumlah;
-        this.produk = produk;
-    }
-
-    public void tampilLaporan() {
-        System.out.println("Tanggal: " + tanggal + ", Jumlah: " + jumlah + ", Produk: " + produk.getNama());
+    void tampilLaporan(Produk produk) {
+        System.out.println("Laporan penjualan produk: " + produk.nama + " dengan harga Rp " + produk.harga);
     }
 }
