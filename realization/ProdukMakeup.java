@@ -1,20 +1,27 @@
 // ProdukMakeup.java
 package realization;
 
-public abstract class ProdukMakeup implements PenjualanInterface {
-    protected String namaProduk;
-    protected double harga;
+public class ProdukMakeup implements PenjualanInterface {
+    private String nama;
+    private double harga;
 
-    public ProdukMakeup(String namaProduk, double harga) {
-        this.namaProduk = namaProduk;
+    public ProdukMakeup(String nama, double harga) {
+        this.nama = nama;
         this.harga = harga;
     }
 
-    public String getNamaProduk() {
-        return namaProduk;
+    @Override
+    public void tampilkanInfo() {
+        System.out.println("Produk makeup umum: " + nama + " seharga Rp" + String.format("%,.0f", harga));
     }
 
+    @Override
     public double getHarga() {
         return harga;
+    }
+
+    @Override
+    public String getDeskripsi() {
+        return "Produk makeup bernama " + nama;
     }
 }

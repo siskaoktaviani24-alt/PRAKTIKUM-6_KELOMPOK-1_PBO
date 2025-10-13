@@ -1,27 +1,30 @@
 // Foundation.java
 package realization;
 
-public class Foundation extends ProdukMakeup {
+public class Foundation implements PenjualanInterface {
+    private String nama;
+    private double harga;
     private String tipeKulit;
 
-    public Foundation(String namaProduk, double harga, String tipeKulit) {
-        super(namaProduk, harga);
+    public Foundation(String nama, double harga, String tipeKulit) {
+        this.nama = nama;
+        this.harga = harga;
         this.tipeKulit = tipeKulit;
     }
 
     @Override
-    public double hitungDiskon() {
-        // Diskon 15% untuk Foundation
-        return harga * 0.15;
+    public void tampilkanInfo() {
+        System.out.println("Foundation " + nama + " untuk kulit " + tipeKulit +
+                           " seharga Rp" + String.format("%,.0f", harga));
     }
 
     @Override
-    public void tampilkanKalimat() {
-        double hargaAkhir = harga - hitungDiskon();
-        System.out.println("Foundation " + namaProduk + 
-            " untuk kulit " + tipeKulit + 
-            " dijual seharga Rp" + harga +
-            ", mendapat diskon Rp" + hitungDiskon() +
-            ", sehingga harga akhirnya Rp" + hargaAkhir + ".");
+    public double getHarga() {
+        return harga;
+    }
+
+    @Override
+    public String getDeskripsi() {
+        return "Foundation " + nama + " untuk kulit " + tipeKulit;
     }
 }

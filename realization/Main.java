@@ -1,22 +1,23 @@
 // Main.java
 package realization;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
-        List<PenjualanInterface> daftarProduk = new ArrayList<>();
+        PenjualanInterface produk1 = new Lipstick("Wardah", 95000, "Merah Muda");
+        PenjualanInterface produk2 = new Foundation("Maybelline", 120000, "Kering");
+        PenjualanInterface produk3 = new ProdukMakeup("Bedak Tabur", 85000);
 
-        Lipstick lipstick = new Lipstick("Maybelline Superstay", 100000, "Merah");
-        Foundation foundation = new Foundation("Wardah Perfect Glow", 150000, "Normal");
+        System.out.println("===== LAPORAN PENJUALAN =====\n");
+        produk1.tampilkanInfo();
+        produk2.tampilkanInfo();
+        produk3.tampilkanInfo();
 
-        daftarProduk.add(lipstick);
-        daftarProduk.add(foundation);
+        double total = produk1.getHarga() + produk2.getHarga() + produk3.getHarga();
+        System.out.println("\nTotal Penjualan Hari Ini: Rp" + String.format("%,.0f", total));
 
-        System.out.println("=== TRANSAKSI PENJUALAN MAKEUP ===");
-        for (PenjualanInterface produk : daftarProduk) {
-            produk.tampilkanKalimat();
-        }
+        System.out.println("\nDeskripsi Produk:");
+        System.out.println("- " + produk1.getDeskripsi());
+        System.out.println("- " + produk2.getDeskripsi());
+        System.out.println("- " + produk3.getDeskripsi());
     }
 }

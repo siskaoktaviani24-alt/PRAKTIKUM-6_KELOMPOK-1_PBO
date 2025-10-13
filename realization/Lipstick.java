@@ -1,26 +1,29 @@
 // Lipstick.java
 package realization;
 
-public class Lipstick extends ProdukMakeup {
+public class Lipstick implements PenjualanInterface {
+    private String nama;
+    private double harga;
     private String warna;
 
-    public Lipstick(String namaProduk, double harga, String warna) {
-        super(namaProduk, harga);
+    public Lipstick(String nama, double harga, String warna) {
+        this.nama = nama;
+        this.harga = harga;
         this.warna = warna;
     }
 
     @Override
-    public double hitungDiskon() {
-        // Diskon 10% untuk Lipstick
-        return harga * 0.10;
+    public void tampilkanInfo() {
+        System.out.println("Lipstick " + nama + " (" + warna + ") seharga Rp" + String.format("%,.0f", harga));
     }
 
     @Override
-    public void tampilkanKalimat() {
-        double hargaAkhir = harga - hitungDiskon();
-        System.out.println("Lipstick " + namaProduk + " warna " + warna + 
-            " dijual dengan harga Rp" + harga + 
-            ", mendapatkan diskon Rp" + hitungDiskon() +
-            ", sehingga harga akhirnya menjadi Rp" + hargaAkhir + ".");
+    public double getHarga() {
+        return harga;
+    }
+
+    @Override
+    public String getDeskripsi() {
+        return "Lipstick " + nama + " warna " + warna;
     }
 }
