@@ -3,9 +3,9 @@ package association.bidirectional;
 import java.util.ArrayList;
 
 public class Produk {
-    String nama;  
-    double harga; 
-    ArrayList<LaporanPenjualan> daftarLaporan = new ArrayList<>();
+     String nama;  
+     double harga; 
+     ArrayList<LaporanPenjualan> daftarLaporan = new ArrayList<>();
 
     public Produk(String nama, double harga) {
         this.nama = nama;
