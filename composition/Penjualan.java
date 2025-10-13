@@ -1,33 +1,29 @@
 // Penjualan.java
 package composition;
 
-import java.util.List;
-
 public class Penjualan {
-    private String idPenjualan;
-    private List<ProdukMakeup> daftarProduk;
-    private StrukPenjualan struk; // Composition: Penjualan memiliki StrukPenjualan
+    // Atribut
+    private ProdukMakeup produk1;
+    private ProdukMakeup produk2;
 
-    public Penjualan(String idPenjualan, List<ProdukMakeup> daftarProduk) {
-        this.idPenjualan = idPenjualan;
-        this.daftarProduk = daftarProduk;
-        this.struk = new StrukPenjualan("STRUK-" + idPenjualan);
+    // Konstruktor
+    public Penjualan(String nama1, double harga1, String nama2, double harga2) {
+        // Composition: Produk dibuat di dalam Penjualan
+        produk1 = new ProdukMakeup(nama1, harga1);
+        produk2 = new ProdukMakeup(nama2, harga2);
     }
 
-    public void tampilkanKalimatPenjualan() {
-        double total = 0;
-        StringBuilder produkList = new StringBuilder();
+    // Method menghitung total harga
+    public double hitungTotal() {
+        return produk1.getHarga() + produk2.getHarga();
+    }
 
-        for (int i = 0; i < daftarProduk.size(); i++) {
-            ProdukMakeup p = daftarProduk.get(i);
-            produkList.append(p.getNamaProduk());
-            if (i < daftarProduk.size() - 1) produkList.append(", ");
-            total += p.getHarga();
-        }
-
-        System.out.println("Penjualan dengan ID " + idPenjualan + 
-            " telah berhasil pada tanggal " + struk.getTanggalCetak() +
-            ". Produk yang dibeli: " + produkList +
-            " dengan total harga Rp" + total + ".");
+    // Method membuat narasi penjualan
+    public String getNarasiPenjualan() {
+        return "Kasir mencatat penjualan dua produk, yaitu " +
+               produk1.getDeskripsiProduk() + " dan " +
+               produk2.getDeskripsiProduk() +
+               ". Total penjualan hari ini mencapai Rp" +
+               String.format("%,.0f", hitungTotal()) + ".";
     }
 }
