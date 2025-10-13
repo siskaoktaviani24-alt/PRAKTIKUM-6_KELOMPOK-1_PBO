@@ -1,9 +1,9 @@
 package association.unidirectional;
 
 public class LaporanPenjualan {
-    public String tanggal;  
-    public int jumlah;      
-    public Produk produk;   
+    String tanggal;  
+    int jumlah;      
+    Produk produk;   
 
     public LaporanPenjualan(String tanggal, int jumlah, Produk produk) {
         this.tanggal = tanggal;
