@@ -3,9 +3,11 @@ package association.unidirectional;
 public class Main {
     public static void main(String[] args) {
         Produk p1 = new Produk("Lipstick", 75000);
-        LaporanPenjualan l1 = new LaporanPenjualan("10 Okt 2025", 10, p1);
+        LaporanPenjualan laporan1 = new LaporanPenjualan();
+        LaporanPenjualan laporan2 = new LaporanPenjualan();
 
-        l1.tampilLaporan();
+        laporan1.tampilLaporan(p1);
+        laporan2.tampilLaporan(p1);
     }
 }
 

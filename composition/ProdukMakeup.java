@@ -1,17 +1,20 @@
-// ProdukMakeup.java
+
 package composition;
 
 public class ProdukMakeup {
-    private String namaProduk;
+    // Atribut
+    private String nama;
     private double harga;
 
-    public ProdukMakeup(String namaProduk, double harga) {
-        this.namaProduk = namaProduk;
+    // Konstruktor
+    public ProdukMakeup(String nama, double harga) {
+        this.nama = nama;
         this.harga = harga;
     }
 
-    public String getNamaProduk() {
-        return namaProduk;
+    // Method
+    public String getDeskripsiProduk() {
+        return nama + " seharga Rp" + String.format("%,.0f", harga);
     }
 
     public double getHarga() {
