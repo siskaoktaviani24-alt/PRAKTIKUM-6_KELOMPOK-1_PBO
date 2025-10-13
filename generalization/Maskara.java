@@ -3,7 +3,7 @@ package generalization;
 public class Maskara extends ProdukMakeup {
     boolean waterproof;
 
-    public Maskara(String namaProduk, int harga, boolean waterproof) {
+    Maskara(String namaProduk, int harga, boolean waterproof) {
         super(namaProduk, harga);
         this.waterproof = waterproof;
     }

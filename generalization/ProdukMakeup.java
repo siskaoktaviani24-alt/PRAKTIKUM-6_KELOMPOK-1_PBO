@@ -4,7 +4,7 @@ public class ProdukMakeup {
     String namaProduk;
     int harga;
 
-    public ProdukMakeup(String namaProduk, int harga) {
+    ProdukMakeup(String namaProduk, int harga) {
         this.namaProduk = namaProduk;
         this.harga = harga;
     }
@@ -13,7 +13,7 @@ public class ProdukMakeup {
         return namaProduk;
     }
 
-    double getHarga() {
+    int getHarga() {
         return harga;
     }
 }

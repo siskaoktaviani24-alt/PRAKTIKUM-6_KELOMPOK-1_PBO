@@ -6,7 +6,7 @@ public class Penjualan {
     String idPenjualan;
     List<ProdukMakeup> daftarProduk;
 
-    public Penjualan(String idPenjualan, List<ProdukMakeup> daftarProduk) {
+    Penjualan(String idPenjualan, List<ProdukMakeup> daftarProduk) {
         this.idPenjualan = idPenjualan;
         this.daftarProduk = daftarProduk;
     }
