@@ -12,8 +12,6 @@ public class LaporanPenjualan {
     }
 
     public void tampilLaporan() {
-        System.out.println("Tanggal: " + tanggal + 
-            ", Jumlah: " + jumlah + 
-            ", Produk: " + produk.getNama());
+        System.out.println("Tanggal: " + tanggal + ", Jumlah: " + jumlah + ", Produk: " + produk.getNama());
     }
 }
