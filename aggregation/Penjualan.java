@@ -8,14 +8,14 @@ public class Penjualan {
     Kasir kasir;
     List<ProdukMakeup> daftarProduk;
 
-    public Penjualan(String idPenjualan, String tanggal, Kasir kasir, List<ProdukMakeup> daftarProduk) {
+    Penjualan(String idPenjualan, String tanggal, Kasir kasir, List<ProdukMakeup> daftarProduk) {
         this.idPenjualan = idPenjualan;
         this.tanggal = tanggal;
         this.kasir = kasir;
         this.daftarProduk = daftarProduk;
     }
 
-    void tampilkanPenjualan() {
+    void tampilkanInfo() {
         int totalHarga = 0;
         StringBuilder daftar = new StringBuilder();
 

@@ -7,11 +7,11 @@ import java.time.format.DateTimeFormatter;
 
 public class Main {
     public static void main(String[] args) {
-        ProdukMakeup p1 = new ProdukMakeup("Lipstick", 75000);
-        ProdukMakeup p2 = new ProdukMakeup("Foundation", 120000);
-        ProdukMakeup p3 = new ProdukMakeup("Maskara", 90000);
+        ProdukMakeup p1 = new ProdukMakeup("Lipstick", 29000);
+        ProdukMakeup p2 = new ProdukMakeup("Concealing Base", 37000);
+        ProdukMakeup p3 = new ProdukMakeup("Maskara", 19000);
 
-        Kasir kasir1 = new Kasir("Siska");
+        Kasir kasir1 = new Kasir("Ayu");
 
         List<ProdukMakeup> daftarProduk = new ArrayList<>();
         daftarProduk.add(p1);
@@ -22,6 +22,6 @@ public class Main {
 
         Penjualan penjualan1 = new Penjualan("P001", tanggal, kasir1, daftarProduk);
 
-        penjualan1.tampilkanPenjualan();
+        penjualan1.tampilkanInfo();
     }
 }
