@@ -10,6 +10,7 @@ public class Maskara extends ProdukMakeup {
 
     String getDeskripsi() {
         String jenis = waterproof ? "waterproof" : "non-waterproof";
-        return "Maskara " + namaProduk + " bersifat " + jenis;
+        return "Maskara merek " + namaProduk + " bersifat " + jenis +
+               " dengan harga Rp" + harga + ".";
     }
 }

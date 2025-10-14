@@ -9,6 +9,7 @@ public class Foundation extends ProdukMakeup {
     }
 
     String getDeskripsi() {
-        return "Foundation " + namaProduk + " untuk kulit " + tipeKulit;
+        return "Foundation merek " + namaProduk + " cocok untuk kulit " +
+               tipeKulit + " dengan harga Rp" + harga + ".";
     }
 }

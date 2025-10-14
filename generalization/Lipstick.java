@@ -9,6 +9,7 @@ public class Lipstick extends ProdukMakeup {
     }
 
     String getDeskripsi() {
-        return "Lipstick " + namaProduk + " berwarna " + warna;
+        return "Lipstick merek " + namaProduk + " berwarna " + warna +
+               " dengan harga Rp" + harga + ".";
     }
 }
