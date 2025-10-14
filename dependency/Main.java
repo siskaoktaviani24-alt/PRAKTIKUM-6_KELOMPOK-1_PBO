@@ -4,7 +4,7 @@ public class Main {
         Produk p2 = new Produk("Bedak Padat", 60000);
         Produk p3 = new Produk("Maskara", 55000);
 
-        LaporanPenjualan laporan = new LaporanPenjualan("10 Oktober 2025");
+        LaporanPenjualan laporan = new LaporanPenjualan("14 Oktober 2025");
 
         laporan.tambahProdukTerjual(p1);
         laporan.tambahProdukTerjual(p2);
