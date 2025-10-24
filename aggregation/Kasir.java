@@ -1,13 +1,13 @@
 package aggregation;
 
 public class Kasir {
-    String namaKasir;
+    public String namaKasir;
 
-    Kasir(String namaKasir) {
+    public Kasir(String namaKasir) {
         this.namaKasir = namaKasir;
     }
 
-    String getNamaKasir() {
+    public String getNamaKasir() {
         return namaKasir;
     }
 }

@@ -1,19 +1,19 @@
 package generalization;
 
 public class ProdukMakeup {
-    String namaProduk;
-    int harga;
+    public String namaProduk;
+    public int harga;
 
-    ProdukMakeup(String namaProduk, int harga) {
+    public ProdukMakeup(String namaProduk, int harga) {
         this.namaProduk = namaProduk;
         this.harga = harga;
     }
 
-    String getNamaProduk() {
+    public String getNamaProduk() {
         return namaProduk;
     }
 
-    int getHarga() {
+    public int getHarga() {
         return harga;
     }
 }

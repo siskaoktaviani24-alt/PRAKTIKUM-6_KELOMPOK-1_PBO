@@ -1,14 +1,14 @@
 package generalization;
 
 public class Maskara extends ProdukMakeup {
-    boolean waterproof;
+    public boolean waterproof;
 
-    Maskara(String namaProduk, int harga, boolean waterproof) {
+    public Maskara(String namaProduk, int harga, boolean waterproof) {
         super(namaProduk, harga);
         this.waterproof = waterproof;
     }
 
-    String getDeskripsi() {
+    public String getDeskripsi() {
         String jenis = waterproof ? "waterproof" : "non-waterproof";
         return "Maskara merek " + namaProduk + " bersifat " + jenis +
                " dengan harga Rp" + harga + ".";
