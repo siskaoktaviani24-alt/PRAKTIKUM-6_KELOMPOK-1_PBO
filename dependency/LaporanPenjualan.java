@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+import aplikasiConsole.Produk;
+
 public class LaporanPenjualan {
     private String tanggal;
     private ArrayList<Produk> daftarProduk;

@@ -1,3 +1,4 @@
+package aplikasiConsole;
 public abstract class Pengguna {
     protected String id;
     protected String nama;

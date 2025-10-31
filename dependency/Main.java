@@ -1,3 +1,5 @@
+import aplikasiConsole.Produk;
+
 public class Main {
     public static void main(String[] args) {
         Produk p1 = new Produk("Lip Tint", 45000);

@@ -1,3 +1,4 @@
+package aplikasiConsole;
 public class Admin extends Pengguna {
     private String username;
     private String password;

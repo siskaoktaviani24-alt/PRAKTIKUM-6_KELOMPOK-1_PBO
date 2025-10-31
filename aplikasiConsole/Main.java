@@ -1,3 +1,4 @@
+package aplikasiConsole;
 import java.util.Scanner;
 
 public class Main {
