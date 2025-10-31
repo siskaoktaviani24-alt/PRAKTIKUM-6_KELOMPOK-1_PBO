@@ -51,7 +51,7 @@ public class KasirApp {
         double harga = Double.parseDouble(sc.nextLine());
 
         daftarProduk.add(new Produk(kode, nama, stok, harga));
-        System.out.println("\n✅ Produk berhasil ditambahkan!");
+        System.out.println("\nProduk berhasil ditambahkan!");
     }
 
     public void transaksi(Scanner sc) {
@@ -59,7 +59,7 @@ public class KasirApp {
         double total = 0;
 
         System.out.println("\n=========== Transaksi Penjualan ===========");
-        tampilProduk(); // 🟢 Daftar produk hanya ditampilkan sekali di awal
+        tampilProduk();
 
         while (true) {
             System.out.print("\nMasukkan kode produk (0 untuk selesai): ");
@@ -89,7 +89,7 @@ public class KasirApp {
                 total += subtotal;
                 p.kurangiStok(qty);
                 daftarBelanja.add(String.format("%-20s x%-3d = Rp%.0f", p.getNama(), qty, subtotal));
-                System.out.println("✅ Produk ditambahkan ke daftar belanja!");
+                System.out.println("Produk ditambahkan ke daftar belanja!");
             }
         }
 
@@ -122,6 +122,6 @@ public class KasirApp {
         double kembalian = bayar - total;
         System.out.printf("KEMBALIAN     : Rp%.0f\n", kembalian);
         System.out.println("========================================");
-        System.out.println("   ✅ Transaksi berhasil, terima kasih!");
+        System.out.println("Transaksi berhasil, terima kasih!");
     }
 }
